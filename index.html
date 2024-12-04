@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Upload System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header> 
+    <h1>PDF Page Counter</h1>
+    <p>Upload your PDF using the QR code below to calculate the total amount.</p>
+  </header>
+
+  <main>
+    <!-- QR Code Section -->
+    <section id="qr-section">
+      <h2>Scan QR Code</h2>
+      <canvas id="qr-code"></canvas>
+      <p>Use the QR code to upload your PDF file from your mobile device.</p>
+    </section>
+
+    <!-- File Upload Section -->
+    <section id="file-upload">
+      <h2>Or Upload PDF Directly</h2>
+      <input type="file" id="fileInput" accept="application/pdf">
+      <button id="uploadBtn">Upload</button>
+    </section>
+
+    <!-- Output Section -->
+    <section id="output-section">
+      <h2>Results</h2>
+      <p id="result">Number of Pages: <span id="pageCount">N/A</span></p>
+      <p>Total Cost: <span>&#8377;</span><span id="totalCost">0.00</span></p>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment-section">
+      <h2>Complete Payment</h2>
+      <button id="payBtn">Pay Now</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 PDF Page Counter. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
